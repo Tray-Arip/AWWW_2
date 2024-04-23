@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    font-size: 1.4rem; /* Set the font size to the desired default value */
+    font-weight: bold; /* Set the font weight to bold */
+    /* Add other default styles as needed */
+  }
+h2 {
+    font-size: 1.1rem; /* Set the font size to the desired default value */
+    font-weight: bold; /* Set the font weight to bold */
+    /* Add other default styles as needed */
+}
+
+a {
+    color: blue;
+}
+a:visited {
+    color: rgb(172, 2, 172); /* Set the color for visited links */
+  }

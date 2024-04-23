@@ -33,6 +33,9 @@ github_username:  "Tray-Arip"
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-postcss-v2
+postcss:
+  cache: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
