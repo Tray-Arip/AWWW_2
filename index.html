@@ -12,6 +12,28 @@ description: What do you need to programme in Python
   <meta name="description" content="{{ page.description }}">
   <!-- Other head elements here -->
 </head>
+<style>
+  .item1 { grid-area: header; }
+  .item2 { grid-area: menu; }
+  .item3 { grid-area: main; }
+  .item4 { grid-area: footer; }
+  .grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main main'
+    'menu footer footer footer footer footer';
+  background-color: #2d96eb;
+  padding: 10px;
+  gap: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
 <body>
   <main>
     <article>
@@ -117,12 +139,12 @@ description: What do you need to programme in Python
     <summary>What's that?</summary>
     Just a small, <span class="text-orange-600">test form</span>. Nothing to worry about. Move along!
   </details>
-  <form action="" method="get" class="form-example" id = "myform">
-    <div class="form-example">
+  <form action="" method="get" class="form-example flex flex-row" id = "myform">
+    <div class="form-example mr-2">
       <label for="name">Enter your email: </label>
       <input type="text" name="name" id="name" autocomplete="on" required />
     </div>
-    <div class="form-example">
+    <div class="form-example mr-2">
       <label for="job-select">Choose a job:</label>
       <select id="job-select">
         <optgroup label="Very High demand">
@@ -144,8 +166,8 @@ description: What do you need to programme in Python
       </select>
     </div>
     <div class="form-example">
-      <button name="button" type="submit" form="myform" class="bg-sky-400 hover:bg-sky-600 shadow-xl flex items-center">
-        <span class="inline-block mr-2">Submit</span>
+      <button name="button" type="submit" form="myform" class="bg-sky-400 hover:bg-sky-600 shadow-xl flex flex-col items-center">
+        <span class="inline-block">Submit</span>
         <span class="relative flex h-3 w-3">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
@@ -193,6 +215,13 @@ description: What do you need to programme in Python
     usemap="#primary"
     src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2020/02/12170643/feb-12-blog-graphs-annual-salary-graph.png"
     alt="750 x 431 picture of presenting salaries of Python Developers" />
+
+  <div class="grid-container">
+    <div class="item1">Header</div>
+    <div class="item2">menu</div>
+    <div class="item3">main</div>
+    <div class="item4">footer</div>
+  </div>
   
   <footer>
     @ Made by Igor Sierakowski
